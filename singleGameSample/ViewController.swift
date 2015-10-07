@@ -14,7 +14,6 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        super.viewDidLoad()
         let skView = self.view as! SKView
         skView.showsFPS = true // FPS表示
         skView.showsNodeCount = true //画面内要素数表示
@@ -22,7 +21,6 @@ class ViewController: UIViewController {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
     override func viewWillAppear(animated: Bool) {
