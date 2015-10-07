@@ -1,10 +1,4 @@
-//
-//  ViewController.swift
-//  singleGameSample
-//
-//  Created by Yuuki.Takara on 2015/10/07.
-//  Copyright (c) 2015年 Yuu. All rights reserved.
-//
+// 参考URL：http://qiita.com/soymsk/items/17ea8c6dc7349a81873b
 
 import UIKit
 import SpriteKit

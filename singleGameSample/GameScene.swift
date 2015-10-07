@@ -8,6 +8,10 @@ class GameScene : SKScene {
         if ( !initiated ) { //初期化時のみ実行
             self.initContent()
             self.initiated = true
+            
+            
+            // 重力を逆方向にする
+            // self.physicsWorld.gravity.dy = 1
         }
     }
     
@@ -43,10 +47,16 @@ class GameScene : SKScene {
     
     // 図形を追加する
     func addShape(location: CGPoint) {
-        var size = self.frame.width/100.0
+        // 追加する丸ボタンのサイズを設定
+        var size = self.frame.width/50.0
+        // 追加するシェイプ
         let shape = SKShapeNode(circleOfRadius: size)
         shape.fillColor = UIColor.whiteColor() // 塗りつぶし設定
         shape.position = location //表示位置設定
+        
+        // 物理演算の追加
+        shape.physicsBody = SKPhysicsBody(circleOfRadius: size)
+        shape.physicsBody?.dynamic = true // このオブジェクト自体が物理演算によって動くように指定
         
         self.addChild(shape) //画面へのオブジェクト追加
     }
